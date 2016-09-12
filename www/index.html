@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!--
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>DIE World</title>
+	</head>
+	<body>
+		<div class="app">
+			<h1>Dalbinho zoeira</h1>
+			<div id="deviceready" class="form">
+
+				Data de nascimento:<input type="date" title="Data Nascimento" id="dtnasc">
+				<br>
+				Apelido:<input type="text" title="Apelido" id="apelido">
+				<br>
+				Senha:<input type="password" title="senha" id="senha">
+				<br>
+				E-mail:<input type="email" title="email" id="email">
+				<br>
+				<button onclick="httpPostGet()">HUEHUE<br></button>
+			</div>
+		</div>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+
+		<script>
+
+			function httpPostGet(){
+				xhr = new XMLHttpRequest;
+				var url="http://192.168.0.14:8080/insertuser";
+
+				xhr.open("POST", url);
+				xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState == 4 && xhr.status == 200) {
+						console.log(JSON.parse(xhr.responseText));
+					}
+				}
+
+				var apelido= document.getElementById('apelido').value;
+				var dtnasc= document.getElementById('dtnasc').value;
+				var senha= document.getElementById('senha').value;
+				var email= document.getElementById('email').value;
+
+				xhr.send("apelido="+apelido+"&dtnasc="+dtnasc+"&email="+email+"&senha="+senha);
+				
+				window.alert("BOA RAPAZINHO!\n Dalbinho esta orgulhoso pelo teste");
+
+
+			}
+
+
+			function httpGet()
+			{
+				var xmlHttp = new XMLHttpRequest();
+				xmlHttp.open( "POST", 'http://192.168.0.14:8080/greeting'); // false for synchronous request
+				xmlHttp.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+				xmlHttp.send( "name=safadinha" );
+				console.log(xmlHttp.responseText);
+
+				var obj = JSON.parse(xmlHttp.responseText);
+
+				window.alert(obj.id+"---"+obj.content);
+			}
+		</script>
+	</body>
+</html>

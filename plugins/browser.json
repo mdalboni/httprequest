@@ -1,0 +1,75 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-battery-status": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-media-capture": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-contacts": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-device-motion": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-device-orientation": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-globalization": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-media": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-vibration": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "technology.overload"
+        },
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "technology.overload"
+        }
+    },
+    "dependent_plugins": {}
+}
